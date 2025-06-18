@@ -1,0 +1,10 @@
+.item img {
+  width: 250px;
+  height:  250px;
+}
+
+.item > button {
+  width: 75px;
+  height: 75px;
+  font-size: 35px;
+}
