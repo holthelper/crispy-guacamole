@@ -1,4 +1,5 @@
 import { items } from "../items.js";
+import { parseMoney } from "./Cash.js";
 
 const time = _ => {
   let date = new Date();
@@ -35,10 +36,6 @@ const updateReceipt = () => {
   }, 0.00)
 
   document.querySelector('#receipt-total span').textContent = parseMoney(totals);
-}
-
-const parseMoney = (num1, num2 = 1) => {
-  return `$${parseFloat(num1 * num2).toFixed(2)}`;
 }
 
 const Receipt = _ => {

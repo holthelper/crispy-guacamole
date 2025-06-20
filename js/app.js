@@ -1,6 +1,9 @@
 import MenuConstructor from "./components/Menu.js";
-import ReceiptConstruction from "./components/Receipt.js";
+import ReceiptConstructor from "./components/Receipt.js";
+import CashConstructor from "./components/Cash.js";
 
 MenuConstructor();
 
-ReceiptConstruction();
+ReceiptConstructor();
+
+CashConstructor();

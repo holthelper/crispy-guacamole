@@ -1,3 +1,6 @@
+* {
+  touch-action: manipulation;
+}
 
 #menu {
   display: flex;
@@ -66,4 +69,13 @@ ul#receipt-items li > span:last-child {
   justify-content: space-between;
   padding: 0 1em;
   line-height: 2.5em;
+}
+
+/* #receipt-cash {
+  display: flex;
+} */
+
+#receipt-cash input {
+  font-size: 1em;
+  width: 2.5em;
 }

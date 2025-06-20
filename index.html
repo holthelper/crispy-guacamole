@@ -21,9 +21,12 @@
         <ul id="receipt-items"></ul>
       </div>
       <div id="receipt-total" class="receipt-padding">TOTAL <span>$0.00</span></div>
-      <div id="receipt-cash" class="receipt-padding">Cash <span>$0.00</span></div>
+      <div id="receipt-cash" class="receipt-padding">Cash <span>$<input type="number" pattern="\d*" placeholder="0.00" /></span></div>
       <div id="receipt-change" class="receipt-padding">Change <span>$0.00</span></div>
+      <div id="receipt-cashout" class="receipt-padding">
+        <ul></ul>
+      </div>
     </section>
-    <script type="module" src="./js/app.js?v=0.1.0"></script>
+    <script type="module" src="./js/app.js?v=0.1.1"></script>
   </body>
 </html>
