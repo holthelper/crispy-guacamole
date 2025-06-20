@@ -1,18 +1,38 @@
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  width: 80em;
+}
+
+.item {
+  text-align: center;
+  width: 25em;
+}
+
 .item img {
-  width: 250px;
-  height:  250px;
+  width: 20em;
+  height: 20em;
 }
 
 .item > button {
-  width: 75px;
-  height: 75px;
-  font-size: 35px;
+  width: 1.9em;
+  height: 1.9em;
+  font-size: 4em;
 }
 
 #receipt {
   display: flex;
-  width: 25em;
+  flex-direction: column;
+  width: 20em;
   font-size: 4em;
+}
+
+#receipt-logo,
+#receipt-name {
+  text-align: center;
+  justify-self: auto;
+  font-size: 2.5em;
 }
 
 #receipt-title,
@@ -20,5 +40,30 @@
   border-color: black;
   border-style: solid;
   border-width: .2em 0;
-  line-height: 1.7em;
+}
+
+ul#receipt-items li {
+  list-style: none;
+  margin-left: 10px;
+}
+
+ul#receipt-items li > span:nth-child(n + 3) {
+  padding: 0 .25em;
+  line-height: 1em;
+}
+
+ul#receipt-items li > span:first-child:after {
+  content: " - ";
+}
+
+ul#receipt-items li > span:last-child {
+  padding-right: 1em;
+  float: right;
+}
+
+.receipt-padding {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em;
+  line-height: 2.5em;
 }

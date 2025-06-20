@@ -10,27 +10,20 @@
   <body>
     <section id="menu"></section>
     <section id="receipt">
-      <div>
-        <div id="receipt-logo"><img src="./" /></div>
-        <div id="receipt-name">Company Name</div>
-        <div id="receipt-title">
-          <div id="receipt-number">#1-2</div>
-          <div id="receipt-date">6/17/2025</div>
-          <div id="receipt-time">1:58:17 AM</div>
-        </div>
-        <div id="receipt-main">
-          <ul id="receipt-items">
-            <li>2 Birra Tacos ($16.00) $32.00</li>
-            <li>4 Elote ($5.00) $20.00</li>
-            <li>2 Agua Fresca ($6.00) $12.00</li>
-          </ul>
-          <div id="receipt-subtotal">Subtotal $64.00</div>
-        </div>
-        <div id="receipt-total">TOTAL $64.00</div>
-        <div id="receipt-cash">CASH $65.00</div>
-        <div id="receipt-change">Change $1.00</div>
+      <div id="receipt-logo"><img src="./" /></div>
+      <div id="receipt-name">Mexilicious</div>
+      <div id="receipt-title" class="receipt-padding">
+        <div id="receipt-number">#1-2</div>
+        <div id="receipt-date"></div>
+        <div id="receipt-time"></div>
       </div>
+      <div id="receipt-main">
+        <ul id="receipt-items"></ul>
+      </div>
+      <div id="receipt-total" class="receipt-padding">TOTAL <span>$0.00</span></div>
+      <div id="receipt-cash" class="receipt-padding">Cash <span>$0.00</span></div>
+      <div id="receipt-change" class="receipt-padding">Change <span>$0.00</span></div>
     </section>
-    <script type="module" src="./js/app.js?v=0.0.1"></script>
+    <script type="module" src="./js/app.js?v=0.1.0"></script>
   </body>
 </html>
