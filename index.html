@@ -10,7 +10,6 @@
   <body>
     <section id="menu"></section>
     <section id="receipt">
-      <div id="receipt-logo"><img src="./" /></div>
       <div id="receipt-name">Mexilicious</div>
       <div id="receipt-title" class="receipt-padding">
         <div id="receipt-number">#1-2</div>
@@ -23,10 +22,10 @@
       <div id="receipt-total" class="receipt-padding">TOTAL <span>$0.00</span></div>
       <div id="receipt-cash" class="receipt-padding">Cash <span>$<input type="number" pattern="\d*" placeholder="0.00" /></span></div>
       <div id="receipt-change" class="receipt-padding">Change <span>$0.00</span></div>
-      <div id="receipt-cashout" class="receipt-padding">
-        <ul></ul>
+      <div id="receipt-cashout">
+        <ul id="receipt-bills"></ul>
       </div>
     </section>
-    <script type="module" src="./js/app.js?v=0.1.1"></script>
+    <script type="module" src="./js/app.js?v=0.1.2"></script>
   </body>
 </html>

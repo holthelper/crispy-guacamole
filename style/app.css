@@ -5,12 +5,14 @@
 #menu {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 80em;
 }
 
 .item {
   text-align: center;
   width: 25em;
+  padding: .75em;
 }
 
 .item img {
@@ -29,9 +31,9 @@
   flex-direction: column;
   width: 20em;
   font-size: 4em;
+  padding-top: 1em;
 }
 
-#receipt-logo,
 #receipt-name {
   text-align: center;
   justify-self: auto;
@@ -45,14 +47,15 @@
   border-width: .2em 0;
 }
 
-ul#receipt-items li {
+ul#receipt-items li,
+ul#receipt-bills li {
   list-style: none;
   margin-left: 10px;
+  line-height: 1em;
 }
 
 ul#receipt-items li > span:nth-child(n + 3) {
   padding: 0 .25em;
-  line-height: 1em;
 }
 
 ul#receipt-items li > span:first-child:after {
@@ -71,11 +74,13 @@ ul#receipt-items li > span:last-child {
   line-height: 2.5em;
 }
 
-/* #receipt-cash {
-  display: flex;
-} */
-
 #receipt-cash input {
   font-size: 1em;
   width: 2.5em;
+}
+
+#receipt-cashout {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1em;
 }

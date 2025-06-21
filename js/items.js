@@ -33,5 +33,12 @@ export const items = [
     Image: "./img/",
     Price: 0.00,
     Enabled: false
+  },
+  {
+    ID: 5,
+    Name: "Birria Consomé",
+    Image: "./img/consome.jpg",
+    Price: 1.00,
+    Enabled: true
   }
 ];

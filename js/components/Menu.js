@@ -1,18 +1,6 @@
 import { edit as receiptEdit } from "./Receipt.js";
 import { items } from "../items.js";
 
-function add(event) {
-  let data = event.target.parentNode.dataset;
-
-  data.quantity = parseInt(data.quantity) + 1;
-
-  receiptEdit(data.id, data.quantity)
-}
-
-function remove() {
-  console.log("remove")
-}
-
 function modify(event) {
   let data = event.target.parentNode.dataset;
   let quantity = parseInt(data.quantity);
@@ -23,7 +11,8 @@ function modify(event) {
   if(event.target.dataset.action == "min" && quantity >= 1) 
     data.quantity = quantity - 1;
 
-  receiptEdit(data.id, data.quantity)
+  receiptEdit(data.id, data.quantity);
+  document.querySelector('#receipt-cash input').dispatchEvent(new Event('input'));
 }
 
 const Menu = _ => {

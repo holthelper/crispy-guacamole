@@ -1,50 +1,27 @@
 function input(event) {
   let total = document.querySelector('#receipt-total span').textContent.slice(1);
+  let change = subtractMoney(event.target.value, total).slice(1);
 
-  let change = subtractMoney(event.target.value, total)
-
-  document.querySelector('#receipt-change span').textContent = change;
-  document.querySelector('#receipt-cashout ul').textContent = "";
-
+  document.querySelector('#receipt-change span').textContent = parseMoney(Math.max(change, 0));
   cashout(change)
 }
 
 const cashout = (change) => {
-  let total = parseFloat(change.slice(1));
-  let cash = [];
+  document.querySelector('#receipt-cashout ul').textContent = "";
 
-  if(total >= 100) {
-    let hundred = Math.floor(total / 100)
-    total -= hundred * 100;
-    cash.push([100, hundred]);
-  }
-  if(total >= 50) {
-    let fifty = Math.floor(total /50)
-    total -= fifty * 50;
-    cash.push([50, fifty]);
-  }
-  if(total >= 20) {
-    let twenty = Math.floor(total / 20)
-    total -= twenty * 20;
-    cash.push([20, twenty]);
-  }
-  if(total >= 10) {
-    let ten = Math.floor(total / 10)
-    total -= ten * 10;
-    cash.push([10, ten]);
-  }
-  if(total >= 5) {
-    let five = Math.floor(total / 5)
-    total -= five * 5;
-    cash.push([5, five]);
-  }
-  if(total < 5) {
-    cash.push([1, total]);
-  }
+  if(change < 0) return;
 
-  cash.forEach(([dom, qty]) => {
-    document.querySelector('#receipt-cashout ul').insertAdjacentHTML('beforeend', `<li>${qty} x $${dom}`)
-  })
+  [100, 50, 20, 10, 5, 1]
+    .reduce((total, tender) => {
+      let bills = Math.floor(total / tender);
+
+      if(total <= tender && total != tender) return total;
+
+      total -= bills * tender;
+      document.querySelector('#receipt-cashout ul').insertAdjacentHTML('beforeend', `<li>${bills} x ${parseMoney(tender)}`);
+
+      return total;
+    }, parseFloat(change));
 }
 
 const Cash = _ => {
