@@ -84,3 +84,31 @@ ul#receipt-items li > span:last-child {
   justify-content: flex-end;
   padding-right: 1em;
 }
+
+#transaction {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#transaction button {
+  height: 1.9em;
+  font-size: 1.2em;
+  padding: 0 1em;
+  border: 0;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+#reset {
+  background-color: rgb(240, 98, 62);
+  color: black;
+}
+
+#process {
+  background-color: rgb(62, 130, 240);
+  color: white;
+}
+
+#transaction button:disabled {
+  background-color: gray;
+}
