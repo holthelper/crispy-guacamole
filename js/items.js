@@ -14,7 +14,7 @@ export const items = [
   {
     Name: "Agua Fresca",
     Image: "./img/agua-fresca.jpg",
-    Price: 7.00,
+    Price: 6.00,
     Enabled: true
   },
   {
