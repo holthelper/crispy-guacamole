@@ -39,12 +39,16 @@ const updateTotal = () => {
 }
 
 const reset = () => {
-  [...document.querySelectorAll('.item')].map((item) => edit(item.dataset.id, item.dataset.quantity = 0) );
+  [...document.querySelectorAll('#menu-items li')].map((item) => edit(item.dataset.id, item.dataset.quantity = 0) );
+  [...document.querySelectorAll('.amount')].map((el) => el.textContent = 0);
 
   let cash = document.querySelector('#receipt-cash input');
 
   cash.value = "";
   cash.dispatchEvent(new Event('input'));
+  
+  document.querySelector('section#menu').style.display = "";
+  document.querySelector('section#receipt').style.display = "none";
 }
 
 const save = () => {
@@ -54,13 +58,13 @@ const save = () => {
 const Receipt = _ => {
   time();
 
-  document.querySelector('#reset').addEventListener('click', reset);
-  document.querySelector('#process').addEventListener('click', save);
+  document.querySelector('#receipt-clear').addEventListener('click', reset);
 }
 
 export {
   Receipt as default,
-  edit
+  edit,
+  reset
 }
 
 const itemTemplate = (id, item, qty = 1) => {

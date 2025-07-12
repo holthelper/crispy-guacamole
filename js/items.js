@@ -12,6 +12,12 @@ export const items = [
     Enabled: true
   },
   {
+    Name: "Birria Ramen",
+    Image: "./img/birria ramen.jpg",
+    Price: 7.00,
+    Enabled: true
+  },
+  {
     Name: "Birria Consomé",
     Image: "./img/consome.jpg",
     Price: 1.00,
@@ -20,14 +26,14 @@ export const items = [
   {
     Name: "Elotes (Cup)",
     Image: "./img/elote cup.jpg",
-    Price: 5.00,
+    Price: 6.00,
     Enabled: true
   },
   {
     Name: "Elotes (Cob)",
     Image: "./img/elote cob.jpg",
     Price: 6.00,
-    Enabled: true
+    Enabled: false
   },
   {
     Name: "Hot Cheeto Boat",
@@ -39,6 +45,24 @@ export const items = [
     Name: "Agua Fresca",
     Image: "./img/agua-fresca.jpg",
     Price: 6.00,
+    Enabled: true
+  },
+  {
+    Name: "Tres Leches (Cup)",
+    Image: "./img/tres leches cup.jpg",
+    Price: 6.00,
+    Enabled: true
+  },
+  {
+    Name: "Watermelon Roll Up",
+    Image: "./img/watermelon roll up.jpg",
+    Price: 6.00,
+    Enabled: true
+  },
+  {
+    Name: "Jarritos Preparados",
+    Image: "./img/jarritos.jpg",
+    Price: 8.00,
     Enabled: true
   }
 ];

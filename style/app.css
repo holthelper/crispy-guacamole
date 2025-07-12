@@ -3,27 +3,35 @@
 }
 
 #menu {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 80em;
-}
+  & ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80em;
 
-.item {
-  text-align: center;
-  width: 25em;
-  padding: .75em;
-}
+    & li {
+      list-style: none;
+      text-align: center;
+      width: 25em;
+      padding: .75em;
 
-.item img {
-  width: 20em;
-  height: 20em;
-}
+      & img {
+        width: 20em;
+        height: 20em;
+      }
 
-.item > button {
-  width: 1.9em;
-  height: 1.9em;
-  font-size: 4em;
+      & button {
+        width: 4em;
+        height: 1.9em;
+        font-size: 4em;
+        margin-left: .15em;
+      }
+    }
+
+    & .amount {
+      font-size: 4em;
+    }
+  }
 }
 
 #receipt {
@@ -32,83 +40,90 @@
   width: 20em;
   font-size: 4em;
   padding-top: 1em;
+
+  & .receipt-padding {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em;
+    line-height: 2.5em;
+  }
+
+  & #receipt-name {
+    text-align: center;
+    justify-self: auto;
+    font-size: 2.5em;
+  }
+
+  & #receipt-title,
+  & #receipt-total {
+    border-color: black;
+    border-style: solid;
+    border-width: .2em 0;
+  }
+
+  & #receipt-main li {
+    list-style: none;
+    margin-left: 10px;
+    line-height: 1em;
+
+    & span:first-child:after {
+      content: " - ";
+    }
+
+    & span:nth-child(n + 3) {
+      padding: 0 .25em;
+    }
+
+    & span:last-child {
+      padding-right: 1em;
+      float: right;
+    }
+  }
+
+  & #receipt-cash input {
+    font-size: 1em;
+    width: 2.5em;
+  }
+
+  & #receipt-cashout {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1em;
+
+    & li {
+      list-style: none;
+      margin-left: 10px;
+      line-height: 1em;
+    }
+  }
 }
 
-#receipt-name {
-  text-align: center;
-  justify-self: auto;
-  font-size: 2.5em;
-}
-
-#receipt-title,
-#receipt-total {
-  border-color: black;
-  border-style: solid;
-  border-width: .2em 0;
-}
-
-ul#receipt-items li,
-ul#receipt-bills li {
-  list-style: none;
-  margin-left: 10px;
-  line-height: 1em;
-}
-
-ul#receipt-items li > span:nth-child(n + 3) {
-  padding: 0 .25em;
-}
-
-ul#receipt-items li > span:first-child:after {
-  content: " - ";
-}
-
-ul#receipt-items li > span:last-child {
-  padding-right: 1em;
-  float: right;
-}
-
-.receipt-padding {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 1em;
-  line-height: 2.5em;
-}
-
-#receipt-cash input {
-  font-size: 1em;
-  width: 2.5em;
-}
-
-#receipt-cashout {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 1em;
-}
-
-#transaction {
+.controls {
   display: flex;
   justify-content: space-evenly;
-}
+  width: 20em;
+  font-size: 64px; /* Hack for now */
 
-#transaction button {
-  height: 1.9em;
-  font-size: 1.2em;
-  padding: 0 1em;
-  border: 0;
-  border-radius: 10px;
-  font-weight: bold;
-}
+  & button {
+    height: 1.9em;
+    font-size: 1.2em;
+    padding: 0 1em;
+    border: 0;
+    border-radius: 10px;
+    font-weight: bold;
 
-#reset {
-  background-color: rgb(240, 98, 62);
-  color: black;
-}
+    &:disabled {
+      background-color: gray;
+    }
+  }
 
-#process {
-  background-color: rgb(62, 130, 240);
-  color: white;
-}
+  & .reset {
+    background-color: rgb(240, 98, 62);
+    color: black;
+  }
 
-#transaction button:disabled {
-  background-color: gray;
+  & .process {
+    background-color: rgb(62, 130, 240);
+    color: white;
+  }
 }
