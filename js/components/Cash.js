@@ -11,7 +11,7 @@ const cashout = (change) => {
 
   if(change < 0) return;
 
-  [100, 50, 20, 10, 5, 1, .25, .1, .05, .01]
+  [20, 10, 5, 1, .25, .1, .05, .01]
     .reduce((total, tender) => {
       let bills = Math.floor(total / tender);
 
