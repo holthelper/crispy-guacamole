@@ -1,14 +1,14 @@
 export const items = [
   {
-    Name: "Birria Taco",
-    Image: "./img/single birria.jpg",
-    Price: 5.50,
-    Enabled: true
-  },
-  {
     Name: "Birria Taco (Tray)",
     Image: "./img/tray birria.jpg",
     Price: 17.00,
+    Enabled: true
+  },
+  {
+    Name: "Birria Taco",
+    Image: "./img/single birria.jpg",
+    Price: 5.50,
     Enabled: true
   },
   {
@@ -51,18 +51,18 @@ export const items = [
     Name: "Tres Leches (Cup)",
     Image: "./img/tres leches cup.jpg",
     Price: 6.00,
-    Enabled: true
+    Enabled: false
   },
   {
     Name: "Watermelon Roll Up",
     Image: "./img/watermelon roll up.jpg",
     Price: 6.00,
-    Enabled: true
+    Enabled: false
   },
   {
     Name: "Jarritos Preparados",
     Image: "./img/jarritos.jpg",
     Price: 8.00,
-    Enabled: true
+    Enabled: false
   }
 ];
