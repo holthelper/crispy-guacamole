@@ -2,7 +2,7 @@ export const items = [
   {
     Name: "Birria Taco (Tray)",
     Image: "./img/tray birria.jpg",
-    Price: 17.00,
+    Price: 18.00,
     Enabled: true
   },
   {
