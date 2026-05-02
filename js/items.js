@@ -45,7 +45,7 @@ export const items = [
     Name: "Agua Fresca",
     Image: "./img/agua-fresca.jpg",
     Price: 6.00,
-    Enabled: true
+    Enabled: false
   },
   {
     Name: "Tres Leches (Cup)",
