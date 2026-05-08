@@ -15,12 +15,12 @@ export const items = [
     Name: "Birria Ramen",
     Image: "./img/birria ramen.jpg",
     Price: 7.00,
-    Enabled: true
+    Enabled: false
   },
   {
     Name: "Birria Consomé",
     Image: "./img/consome.jpg",
-    Price: 1.00,
+    Price: 2.00,
     Enabled: true
   },
   {
